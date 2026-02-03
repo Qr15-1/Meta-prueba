@@ -1,0 +1,29 @@
+{
+  "name": "astro-pwa-app",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "dev:polling": "node server-polling.js",
+    "build": "astro build",
+    "start": "HOST=0.0.0.0 PORT=${PORT:-10000} node ./dist/server/entry.mjs",
+    "start:polling": "node server-polling.js",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/node": "^9.5.1",
+    "@vite-pwa/astro": "^1.1.1",
+    "astro": "^5.15.4",
+    "bcryptjs": "^3.0.3",
+    "dotenv": "^17.2.3",
+    "node-fetch": "^3.3.2",
+    "pg": "^8.18.0",
+    "web-push": "^3.6.7",
+    "workbox-window": "^7.3.0"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.16.0",
+    "@types/web-push": "^3.6.4"
+  }
+}

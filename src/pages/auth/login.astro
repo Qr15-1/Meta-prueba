@@ -1,0 +1,115 @@
+---
+// Página para iniciar el flujo OAuth con Meta
+const META_APP_ID = import.meta.env.META_APP_ID || "1165184268021156";
+const REDIRECT_URI = import.meta.env.PUBLIC_REDIRECT_URI || "http://localhost:4321/auth/callback";
+
+// Permisos necesarios para Meta Ads
+const SCOPES = [
+  'ads_read', // Leer datos de anuncios
+  'ads_management', // Gestionar anuncios
+  'business_management', // Acceso a Business Manager
+  'pages_show_list', // Listar páginas del usuario
+  'pages_read_engagement', // Métricas orgánicas de páginas
+  'instagram_basic', // Datos básicos de Instagram
+  'instagram_manage_insights' // Insights orgánicos de Instagram
+].join(',');
+
+const authUrl = `https://www.facebook.com/v18.0/dialog/oauth?client_id=${META_APP_ID}&redirect_uri=${encodeURIComponent(REDIRECT_URI)}&scope=${SCOPES}&response_type=code`;
+---
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Conectar - Meta IA</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        background: #ffffff;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      .container {
+        background: white;
+        border-radius: 0;
+        border: 3px solid #000000;
+        padding: 3rem;
+        max-width: 500px;
+        width: 100%;
+        text-align: center;
+      }
+
+      h1 {
+        color: #000000;
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+        font-weight: 900;
+      }
+
+      .btn {
+        background: #000000;
+        color: white;
+        border: 2px solid #000000;
+        padding: 1rem 2rem;
+        border-radius: 0;
+        font-size: 1.1rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .btn:hover {
+        background: #333333;
+        transform: translateY(-2px);
+      }
+
+      .btn:active {
+        transform: translateY(0);
+      }
+
+      .back-btn {
+        display: inline-block;
+        margin-top: 1rem;
+        color: #666666;
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: 600;
+      }
+
+      .back-btn:hover {
+        color: #000000;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Meta IA</h1>
+
+      <a href={authUrl} class="btn">
+        Conectar
+      </a>
+
+      <a href="/" class="back-btn">Volver</a>
+    </div>
+  </body>
+</html>
+
+
+

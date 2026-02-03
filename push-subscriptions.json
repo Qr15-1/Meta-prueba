@@ -1,0 +1,16 @@
+[
+  {
+    "userId": "RUFBUWp1cHBrcmFRQlAx",
+    "subscription": {
+      "endpoint": "https://fcm.googleapis.com/wp/fv1AtYndYLQ:APA91bFRttJ-grUkQse-cDsm8rxMglqNHI-OyysAfNEL5Fvjo4K8MUMWTiZh1Obj_FaVZe6KQAzMTiccKMqM7Bv_Y8Cso-ujREefFkI_aLrjCl8J8Sdmc8vAgshcQRCqPi5Wna09dApR",
+      "expirationTime": null,
+      "keys": {
+        "p256dh": "BLFioS864X9qL3E6aFnSMJW01e1EApQc-eHbJDYvL-MSW-V6r23D4SBynbPZsorlv5qvWyRzWXkoD2sw0qyol6s",
+        "auth": "Y-Vbq6A6JGtbuj2QnpdzUA"
+      }
+    },
+    "accountIds": [],
+    "createdAt": "2025-11-19T19:57:42.865Z",
+    "lastCheck": null
+  }
+]
